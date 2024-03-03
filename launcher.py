@@ -4,7 +4,7 @@ import pygame
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
 
-
+from main import main_game
 
 app = QApplication([])
 settings = {}
@@ -26,6 +26,9 @@ start_btn = QPushButton("Старт")
 main_line = QVBoxLayout()
 main_line.addWidget(start_btn)
 
+window.setLayout(main_line)
+
+start_btn.clicked.connect(main_game)
 
 window.show()
 app.exec()

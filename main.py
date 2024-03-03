@@ -135,6 +135,6 @@ def main():
 
     pygame.quit()
 
-if __name__ == "__main__":
+def main_game():
     main()
 
