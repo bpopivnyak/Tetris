@@ -85,9 +85,13 @@ def main():
     game_over = False
     fall_time = 0
     fall_speed = 0.5
+    #створити картинку
+    bg = pygame.image.load("HD-wallpaper-tetris-pattern-tetris-blocks-blue-bricks-build-c0y0te7-game-gameboy-gamer-gaming-greey-neon-nintendo-pattern-purple-turquoise-video-viedo-game.jpg")
 
     while not game_over:
         screen.fill(WHITE)
+        screen.blit(bg, [0,0])
+        #намалювати картинку
 
         # Handle events
         for event in pygame.event.get():
