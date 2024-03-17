@@ -7,6 +7,10 @@ from PyQt5.QtWidgets import *
 from main import main_game
 
 app = QApplication([])
+app.setStyleSheet(
+"""
+
+""")
 settings = {}
 def read_data():
     global settings
@@ -18,12 +22,15 @@ def write_data():
         json.dump(settings, file)
 window = QWidget()
 
+
 read_data()
 print(settings)
 
 start_btn = QPushButton("Старт")
+title = QLabel("Tetris")
 
 main_line = QVBoxLayout()
+main_line.addWidget(title)
 main_line.addWidget(start_btn)
 
 window.setLayout(main_line)
