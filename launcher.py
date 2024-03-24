@@ -9,7 +9,16 @@ from main import main_game
 app = QApplication([])
 app.setStyleSheet(
 """
+QWidget {
+    background-image: url('istockphoto-1415439737-640x640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
 
+QPushButton {
+    background-color: #80FF00
+}
 """)
 settings = {}
 def read_data():
@@ -21,7 +30,7 @@ def write_data():
     with open("settings.json", "w", encoding="utf-8") as file:
         json.dump(settings, file)
 window = QWidget()
-
+window.resize(470, 640)
 
 read_data()
 print(settings)
