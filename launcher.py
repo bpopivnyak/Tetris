@@ -30,7 +30,7 @@ def write_data():
     with open("settings.json", "w", encoding="utf-8") as file:
         json.dump(settings, file)
 window = QWidget()
-window.resize(470, 640)
+window.resize(640, 360)
 
 read_data()
 print(settings)
